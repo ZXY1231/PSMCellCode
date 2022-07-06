@@ -43,10 +43,10 @@ for i = 1:round
 
             size1=period-1;
             for i1=1:size1
-                A1(i1)=100*log(A(i1)/A(i1+1));
+                A1(i1)=1000*log(A(i1)/A(i1+1));
             end
 %             c = toc
-            A1(A1>3)=[];A1(A1<-3)=[];
+            A1(A1>0.2)=[];A1(A1<-0.2)=[];
             abc=size(A1);abc1=abc(2)-1;    
 
 %             hHdata1 = histogram(A1,barn);
